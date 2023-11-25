@@ -1,0 +1,201 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: futura;
+    src: url(../../Futura-Bold.ttf);
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: futura;
+}
+*::selection{
+    background-color: #fff;
+    color: #000;
+}
+#minicircle{
+    width: 13px;
+    position: absolute;
+    z-index: 999;
+    border-radius: 50%;
+    height: 17px;
+    background-color: #68656542;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s ;
+}
+body{
+    /* background-image: url("https://images.unsplash.com/photo-1605478328994-f93e98217da7?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mzh8fHxlbnwwfHx8fHw%3D"); */
+    /* background-image: url(https://images.unsplash.com/photo-1584968173934-bc0b588eb806?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+   /* background-image: url("https://img.freepik.com/free-photo/futuristic-blue-business-growth-chart-touch-screen-generated-by-ai_188544-30616.jpg");
+    background-position:top; 
+    background-size: cover; */
+    /* background-color: #000000f5; */
+    background-color: #FAE3D9;
+    font-family: futura;
+}
+#loader{
+    height: 100vh;
+    width: 100%;
+    position:fixed;
+    z-index: 99;
+    /* background-color: rgb(76,81,175); */
+    /* background-color: color-mix(in srgb, color-mix(in srgb, purple, mediumvioletred), gold) */
+    /* background-image: linear-gradient(to bottom , rgba(49, 52, 108, 0.836),rgb(11, 12, 21) ); */
+    /* background-image: url("https://images.unsplash.com/photo-1610733099270-0960608da9fc?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww"); */
+    /* background-image: url("https://img.freepik.com/free-vector/wave-background-abstract-gradient-design_483537-3688.jpg"); */
+    /* background-image: url("https://undsgn.com/wp-content/uploads/2018/04/ltotbngnzzu.jpg"); */
+    /* background-image: url("https://img.freepik.com/free-photo/mockup-luxury-black-credit-card-black-background_123827-28126.jpg");
+    background-position:center; 
+    background-size: cover; */
+    background-color: #d39292;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#loader h1{
+    font-size: 7vw;
+    color: rgb(38, 38, 39);
+    text-shadow: 2.5px 2.5px 0 #7f8084, 4px 4px 0 #cfcdcd;
+    transform: translateZ(10px);
+    
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+   position: relative;
+   background-color: #BBDED6;
+}
+#nav{
+    height: 80px;
+    width: 100%;
+    color: #aca5a5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 30px;
+    position: fixed;
+    z-index: 9999;
+    background-color: #ffb6b9bd;
+}
+ #nav img{
+    height: 120px;
+    width: 120px;
+}
+#nav #heading{
+    font-size: 5vw;
+    font-weight: 900;
+    color: #343333;;
+}
+ #nav #others{
+    display: flex;
+    gap:20px;
+    align-items: center;
+
+}
+#nav #others a{
+    text-decoration: none;
+    color: #343333a9;
+}
+#nav #others button{
+    font-size: 17px;
+    background-color: #d39292;
+    color: #fff;
+    border:none;
+    padding: 5px 10px;
+    border-radius: 30px;
+    
+}
+#payment{
+    height: calc(100% - 80px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+
+}
+#payment-container{
+   
+    color:  #272626a9;
+    
+}
+#form-div{
+    width: 90%;
+    /* background-color: red; */
+    
+}
+#form-div .inp{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: gray; */
+}
+
+
+#payment-container h1{
+    padding-left: 20px;
+    font-size: 2.5vw;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid #f0eaea;
+    margin-bottom: 15px;
+}
+#payment-container h1 #hi{
+    color: rgba(72, 70, 70, 0.662);
+}
+#payment-container h1 #hello{
+    position: absolute;
+    top:-0.6%;
+    
+    color: rgba(53, 53, 53, 0.982);;
+   
+}
+#payment-container input{
+    margin-bottom: 12px;
+
+   
+
+}
+#payment-container p{
+    font-size: 1.5vw;
+    margin-bottom: 10px;
+}
+#payment-container form{
+    font-size: 1vw;
+}
+#payment-container button{
+    padding:10px 8px;
+    font-size: 1vw;
+    font-weight: 600;
+    font-family: futura;
+    border-radius: 50px;
+    border:none;
+    background-color: rgb(57, 59, 61);
+    color: #fff;
+    transition: all ease 0.5s;
+    margin-left: 120px;
+    margin-top: 7px;
+
+}
+
+#page2
+{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+
+}
+#payment-container button:hover{
+    background-color: #cfcdcd;
+    color:rgb(57, 59, 61);
+}
+/* #center{
+    height: calc(100% - 80px);
+    background-color: red;
+    width: 100%;
+} */
