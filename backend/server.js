@@ -3,9 +3,9 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 // import cors from 'cors';
 import userRoutes from './Routes/users.js'
-// import * as dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 // basically being used to configure environmental variables and not store sensitive info like passwords in code. 
-// dotenv.config()
+dotenv.config()
 
 
 
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/users', userRoutes);
 
-const CONN_URL = `mongodb+srv://kartikChinda:1517sec4@cluster0.zxwsqrn.mongodb.net/?retryWrites=true&w=majority`;
+const CONN_URL = `mongodb+srv://kartikChinda:${process.env.PASS}@cluster0.zxwsqrn.mongodb.net/?retryWrites=true&w=majority`;
 
 const PORT = process.env.PORT || 5000
 
