@@ -48,12 +48,16 @@ export const createUser = async (req, res) => {
     const newUser = new userDetails(user);
     // console.log(user);
     const password = user.password;
-    console.log(password);
+    // console.log(password);
 
+
+    // Here, people wouild normally use a bcrypt library that hashes the password with a hashkey and takes years after years to decore, however, those passwords are so long and strings that they cant be remembered or spoken out loud, so instead of that, we are running our own password encryption. 
     runEncryption(password);
     newUser.voicePass = finalRes;
+
     try {
         await newUser.save();
+        // const token = jwt.sign({})
         res.status(200).json(newUser);
     } catch (error) {
         res.status(404).json({ message: error });
