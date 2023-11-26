@@ -10,6 +10,12 @@ function changePg2() {
   });
 }
 changePg2();
+function circleMouseFollower(){
+  window.addEventListener("mousemove",function(dets){
+     this.document.querySelector("#minicircle").style.transform=`translate(${dets.x}px,${dets.y}px)` 
+  })
+}
+circleMouseFollower();
 
 function relocate() {
   location.replace('index3.html')

@@ -49,7 +49,6 @@ button{
     height:100%;
    width: 100%;
    position: relative;
-   overflow: hidden;
 }
 #nav{
     /* background-color: rgba(0, 0, 0, 0.929); */
@@ -60,7 +59,7 @@ button{
     align-items: center;
     justify-content: space-between;
     padding:10px 30px;
-    position: fixed;
+    /* position: fixed; */
     background-color:#FFB6B9 ;
     /* background-color: rgba(0, 0, 0, 0.114); */
 }
@@ -95,143 +94,78 @@ button{
     
 }
 
-#center{
-    height: 100%;
+#container
+{
+    height:calc(100% - 80px);
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
     position: relative;
-    background-color: #28282823;
 }
-#box
-{
-    height: 70%;
-    width: 40%;
-    /* background-color: orange;
-     */
-     background-color: #BBDED6;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+#container #left{
+    height: 100%;
+    width: 50%;
+    /* background-color: green; */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: relative;
     align-items: center;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 170px;
-    line-height: 4.5vw;
-}
-#bubble
-{
-    height: 80px;
-    width: 70px;
-    /* border-radius: 50%; */
-    border-top-right-radius: 30%;
-    border-bottom-left-radius: 40%;
-    border-bottom-right-radius:20% ;
-
-    background-color:#7be7cd8c;
-    opacity: 0.8;
-    position: absolute;
-    z-index: 99;
-    top: 22%;
-    left: 28%;
+    justify-content: center;
+    
 
 }
-#box h1{
-    color: #000000de;
-    font-size: 3.5vw;
-}
-#box h2{
-    color: #424040c8;
-    font-size: 2vw;
-    padding-left: 25px;
-}
-#box span{
-    margin-left: 150px;
-    font-size: 5vw;
-    color: #424040ad;
-    /* text-shadow: 4px 4px 5px rgba(34, 34, 34, 0.5); */
-}
-
-#pay-button{
+#left img{
+    
+    height: 80%;
     width: 80%;
-    height: 90%;
-    background-color: #61c0be3d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom-left-radius: 150px;
-    border-top-right-radius: 50px;
+    
+    /* object-fit: cover; */
+    /* object-position: center; */
+   border-radius: 50px;
+   opacity: 0.8;
+   position: relative;
 }
-/* #pay-button #pay-button-h1 h1{
-    font-size: 3vw;
-}
-#pay-button #pay-button-h1 span{
-    font-size: 3vw;
-    margin-left: 0px;
-    color: #000;
-}
-#pay-button #pay-button-h1 #paybtn{
-    padding: 20px 30px;
-    background-color: red;
-} */
-#paybtn{
-    font-size: 3vw;
-    font-weight: 700;
-    padding: 40px 70px;
-    color: #0000009d;
-    transition: all ease 0.5s;
-}
-#info{
-    height: 200px;
-    width: 200px;
-    background-color:#FAE3D9 ;
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 20px;
-    border-top-left-radius: 40px;
-    border-bottom-right-radius: 50px;
-    padding-right: 10px;
-    gap: 15px;
-}
-#info h3{
-    font-size: 1.5vw;
-    color: #7d7c7c;
-    line-height: 1.7vw;
 
-}
-#info h2{
-    font-size: 2vw;
-    color: #2a29298f;
-    font-weight: 800;
-    margin-left: -20px;
-    text-transform: uppercase;
-    text-shadow: 3px 3px 5px rgba(112, 111, 111, 0.299); 
-}
-#info h2 i{
-    text-shadow: none;
-    color:#2a2929b2 ;
-    font-size: 1.8vw;
-    font-weight:600;
-}
-#pay-button button:hover{
-    background-color:#BBDED6 ;
-    color: #0000009c;
-}
-#imgdiv{
-    position: absolute;
-    right: 5%;
-    top: 40%;
+#container #right{
+    height: 100%;
+    width: 50%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     
 }
-#imgdiv p{
-    font-size: 1.5vw;
-    font-weight: 500;
-    margin-top: 10px;
-    color: #0000009c;
+#right #rightcontent{
+    background-color:#f9ccce;
+    padding: 60px 30px;
+    border-radius: 50px;
+    position: relative;
+}
+#container #right h1
+{
+    font-size: 3vw;
+    font-weight: 400;
+    color: #000000bb;
+    margin-bottom: 10px;
 
+}
+#container #right p{
+    font-size: 2vw;
+    color: #282828;
+}
+#decoration{
+    height: 60px;
+    width: 60px;
+    background-color: #fabcbe70;
+    position: absolute;
+    top: -3%;
+    left: -3%;
+    border-top-left-radius: 50px;
+}
+#line
+{
+    height: 80%;
+    width: 2px;
+    background-color:#ffffff88;
+    margin-top: 40px;
 }
