@@ -15,6 +15,10 @@ app.use(bodyParser.json({ extended: true }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.static('../frontend/public/html'));
+
 // app.use(cors());
 
 app.use('/users', userRoutes);
