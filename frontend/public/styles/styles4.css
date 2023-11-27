@@ -49,6 +49,7 @@ button{
     height:100%;
    width: 100%;
    position: relative;
+   overflow: hidden;
 }
 #nav{
     /* background-color: rgba(0, 0, 0, 0.929); */
@@ -68,7 +69,7 @@ button{
     width: 120px;
 }
 #nav #heading{
-    font-size: 5vw;
+    font-size: 4.3vw;
     font-weight: 900;
     /* padding-left: 100px; */
     color: #343333;
@@ -121,13 +122,12 @@ button{
     height: 100%;
     width: 50%;
     /* background-color: orange; */
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   margin-top: 50px;
    padding-left: 30px;
 
 }
 #right h1{
+    padding-left: 30px;
     font-size: 2.5vw;
     font-weight: 500;
     color:#34333380
@@ -135,7 +135,7 @@ button{
 }
 
 #voicerec button{
-    padding: 23px 17px;
+    padding: 90px 70px;
     font-size: 2vw;
     font-weight: 600;
     margin-bottom: 30px;
@@ -152,10 +152,12 @@ button{
     border: none;
     font-size: 2vw;
     background-color: #BBDED6;
-    height: 50px;
+    height: 80px;
     color: #000;
     font-weight: 600;
-    width: 330px;
+    width: 400px;
+    display: flex;
+
 }
 #line{
     height: 80%;

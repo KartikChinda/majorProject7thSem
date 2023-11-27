@@ -20,3 +20,20 @@ circleMouseFollower();
 function relocate() {
   location.replace('index3.html')
 }
+function textToSpeech(){
+  if ('speechSynthesis' in window) {
+    // Function to speak the text
+    function speakText() {
+        const textToSpeak = "Congratulations , You've been registered to iSight";
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = 'en-US';
+        speechSynthesis.speak(utterance);
+    }
+
+    // Speak text on page load (try using a setTimeout for better compatibility)
+    setTimeout(speakText, 100);
+} else {
+    alert('Text-to-speech not supported in this browser.');
+}
+}
+textToSpeech();

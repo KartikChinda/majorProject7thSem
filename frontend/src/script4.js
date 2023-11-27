@@ -28,6 +28,8 @@
 // } else {
 //     alert('Speech recognition not supported in this browser.');
 // }
+function addvoice()
+{
 if ('webkitSpeechRecognition' in window) {
     const recognition = new webkitSpeechRecognition();
     recognition.lang = 'en-US';
@@ -42,7 +44,10 @@ if ('webkitSpeechRecognition' in window) {
 
         if (!isNaN(number)) {
             // Update the value of the input field
-            numberField.value = `                ${number}`;
+            numberField.value = `\t\t\t${number}`;
+            //Voice 
+            //relocate
+
         } else {
             alert('Sorry, I couldn\'t recognize a valid number.');
         }
@@ -56,20 +61,49 @@ if ('webkitSpeechRecognition' in window) {
     document.getElementById('startButton').addEventListener('click', function() {
         recognition.start();
     });
+    recognition.start();
 } else {
     alert('Speech recognition not supported in this browser.');
 }
-
+}
+addvoice();
 function circleMouseFollower(){
     window.addEventListener("mousemove",function(dets){
        this.document.querySelector("#minicircle").style.transform=`translate(${dets.x}px,${dets.y}px)` 
     })
   }
-  circleMouseFollower();
-  document.querySelector("#box").addEventListener("mouseenter",function(){
-    document.querySelector("#minicircle").style.backgroundColor=`#BBDEc9`;
-  })
-  document.querySelector("#box").addEventListener("mouseleave",function(){
-    document.querySelector("#minicircle").style.backgroundColor=`#f0a3a39c`;
-  })
+ circleMouseFollower();
+   function textToSpeech(){
+    if ('speechSynthesis' in window) {
+      // Function to speak the text
+      function speakText() {
+          const textToSpeak = "Please speak out the amount you want to pay";
+          const utterance = new SpeechSynthesisUtterance(textToSpeak);
+          utterance.lang = 'en-US';
+          speechSynthesis.speak(utterance);
+
+        //   addvoice();
+         
+      }
   
+      // Speak text on page load (try using a setTimeout for better compatibility)
+      setTimeout(speakText, 100);
+  } else {
+      alert('Text-to-speech not supported in this browser.');
+  }
+  }
+  textToSpeech();
+
+  function changePg6() {
+    document.getElementById('numberField').addEventListener('click', function (event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+      // call at the end of the last function on the page. 
+      relocate();
+  
+    });
+  }
+  changePg6();
+  function relocate() {
+    location.replace('index6.html')
+  }
