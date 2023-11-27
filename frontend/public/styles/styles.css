@@ -86,8 +86,9 @@ body{
     width: 120px;
 }
 #nav #heading{
-    font-size: 5vw;
+    font-size: 4.3vw;
     font-weight: 900;
+    margin-left: 100px;
     color: #343333;;
 }
  #nav #others{
