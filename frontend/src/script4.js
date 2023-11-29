@@ -77,7 +77,7 @@ function circleMouseFollower(){
     if ('speechSynthesis' in window) {
       // Function to speak the text
       function speakText() {
-          const textToSpeak = "Please speak out the amount you want to pay";
+          const textToSpeak = "Please click on the right side of the screen and speak out the amount you want to pay";
           const utterance = new SpeechSynthesisUtterance(textToSpeak);
           utterance.lang = 'en-US';
           speechSynthesis.speak(utterance);

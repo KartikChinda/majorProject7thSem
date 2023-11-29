@@ -78,7 +78,7 @@ function pass(){
     if ('speechSynthesis' in window) {
       // Function to speak the text
       function speakText() {
-          const textToSpeak = "Please Speak your Password";
+          const textToSpeak = "Please click on the right side of the screen and Speak your Password";
           const utterance = new SpeechSynthesisUtterance(textToSpeak);
           utterance.lang = 'en-US';
           speechSynthesis.speak(utterance);
