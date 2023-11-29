@@ -6,7 +6,7 @@ import userRoutes from './Routes/users.js'
 import * as dotenv from 'dotenv';
 // basically being used to configure environmental variables and not store sensitive info like passwords in code. 
 dotenv.config()
-
+//hi
 
 
 const app = express();
