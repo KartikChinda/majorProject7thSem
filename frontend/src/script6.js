@@ -6,7 +6,7 @@ function pass(){
   
       // Get the input field
       const numberField = document.getElementById('numberField');
-        let password=123;
+        let password=42;
       recognition.onresult = function(event) {
           const result = event.results[0][0].transcript;
           const number = parseFloat(result);
@@ -33,7 +33,7 @@ function pass(){
             } else {
                 alert('Text-to-speech not supported in this browser.');
             }
-
+           relocate();
         },1500);
         
         }
@@ -96,16 +96,16 @@ function pass(){
        this.document.querySelector("#minicircle").style.transform=`translate(${dets.x}px,${dets.y}px)` 
     })
   }
- function changePg7() {
-    document.getElementById('upper').addEventListener('click', function (event) {
-      // Prevent the default form submission behavior
-      event.preventDefault();
-      // call at the end of the last function on the page. 
-      relocate();
+//  function changePg7() {
+//     document.getElementById('upper').addEventListener('click', function (event) {
+//       // Prevent the default form submission behavior
+//       event.preventDefault();
+//       // call at the end of the last function on the page. 
+//       relocate();
   
-    });
-  }
-  changePg7();
+//     });
+//   }
+//   changePg7();
   
   function relocate() {
     location.replace('index7.html')

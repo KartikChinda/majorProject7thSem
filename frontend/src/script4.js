@@ -61,7 +61,7 @@ if ('webkitSpeechRecognition' in window) {
     document.getElementById('startButton').addEventListener('click', function() {
         recognition.start();
     });
-    recognition.start();
+   
 } else {
     alert('Speech recognition not supported in this browser.');
 }
