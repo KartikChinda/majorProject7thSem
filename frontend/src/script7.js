@@ -24,6 +24,11 @@ console.log("hello");
 
   circleMouseFollower();
   let tl=gsap.timeline();
+  tl.to("#above",{
+    x:"100%",
+    duration:1,
+    
+  })
   tl.from("#left-content img, #left-content h1",{
     delay:1,
     opacity:0,
@@ -51,7 +56,7 @@ console.log("hello");
     if ('speechSynthesis' in window) {
       // Function to speak the text
       function speakText() {
-          const textToSpeak = "Redirecting to Home Page";
+          const textToSpeak = "Payment Successful ,Redirecting to Home Page";
           const utterance = new SpeechSynthesisUtterance(textToSpeak);
           utterance.lang = 'en-US';
           speechSynthesis.speak(utterance);
@@ -76,5 +81,5 @@ console.log("hello");
   changePg1();
   
   function relocate() {
-    location.replace('index.html')
+    location.replace('index3.html')
   }

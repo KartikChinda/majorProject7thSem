@@ -5,17 +5,19 @@ function circleMouseFollower(){
     })
   }
 circleMouseFollower();
-  function changePg4() {
-    document.getElementById('rightcontent').addEventListener('click', function (event) {
-      // Prevent the default form submission behavior
-      event.preventDefault();
-      // call at the end of the last function on the page. 
-      relocate();
+//   function changePg4() {
+//     document.getElementById('rightcontent').addEventListener('click', function (event) {
+//       // Prevent the default form submission behavior
+//       event.preventDefault();
+//       // call at the end of the last function on the page. 
+//       relocate();
   
-    });
-  }
-  changePg4();
-  
+//     });
+//   }
+//   changePg4();
+  setTimeout(function(){
+    relocate();
+  },5000)
   function relocate() {
     location.replace('index5.html')
   }
