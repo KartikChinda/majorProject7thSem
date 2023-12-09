@@ -45,6 +45,7 @@ if ('webkitSpeechRecognition' in window) {
         if (!isNaN(number)) {
             // Update the value of the input field
             numberField.value = `\t\t\t${number}`;
+            textToSpeech1();
             //Voice 
             //relocate
 
@@ -73,6 +74,28 @@ function circleMouseFollower(){
     })
   }
  circleMouseFollower();
+ function textToSpeech1(){
+  if ('speechSynthesis' in window) {
+    // Function to speak the text
+    function speakText() {
+        const selected=document.querySelector("input");
+        const amt=selected.value;
+        const textToSpeak = `The Amount Entered Is ${amt}`;
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = 'en-US';
+        speechSynthesis.speak(utterance);
+
+      //   addvoice();
+       
+    }
+
+    // Speak text on page load (try using a setTimeout for better compatibility)
+    setTimeout(speakText, 100);
+} else {
+    alert('Text-to-speech not supported in this browser.');
+}
+}
+
    function textToSpeech(){
     if ('speechSynthesis' in window) {
       // Function to speak the text
