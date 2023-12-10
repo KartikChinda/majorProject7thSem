@@ -63,11 +63,11 @@ function anim() {
     duration: 1,
 
   })
-  // tl.to("#nav #heading h4", {
-  //   opacity: 0,
-  //   delay: 0.7,
-  //   duration: 0.5
-  // })
+  tl.to("#nav #heading h4", {
+    opacity: 0,
+    delay: 0.7,
+    duration: 0.5
+  })
   tl.to("#page1 #mix", {
 
     opacity: 0,
@@ -127,7 +127,7 @@ circleMouseFollower();
 function changePg() {
   document.getElementById('form-id').addEventListener('submit', function (event) {
     // Prevent the default form submission behavior
-    event.preventDefault();
+    // event.preventDefault();
 
     // Redirect to 'index2.html' immediately
     // call at the end of all work done. 
@@ -143,41 +143,7 @@ function relocate() {
 }
 
 
-// function textToSpeech()
-// {
-//    // Check for browser support
-//    if ('speechSynthesis' in window) {
-//     // Function to speak the text
-//     function speakText() {
-//         const textToSpeak = "Welcome to my website! This is an example of text-to-speech on button click.";
-//         const utterance = new SpeechSynthesisUtterance(textToSpeak);
-//         utterance.lang = 'en-US';
-//         speechSynthesis.speak(utterance);
-//     }
 
-//     // Attach the function to the button click event
-//     document.getElementById('speakButton').addEventListener('click', speakText);
-// } else {
-//     alert('Text-to-speech not supported in this browser.');
-// }
-// }
-// function textToSpeech(){
-//   if ('speechSynthesis' in window) {
-//     // Function to speak the text
-//     function speakText() {
-//         const textToSpeak = "Start the Registration Process";
-//         const utterance = new SpeechSynthesisUtterance(textToSpeak);
-//         utterance.lang = 'en-US';
-//         speechSynthesis.speak(utterance);
-//     }
-
-//     // Speak text on page load (try using a setTimeout for better compatibility)
-//     setTimeout(speakText, 100);
-// } else {
-//     alert('Text-to-speech not supported in this browser.');
-// }
-// }
-// textToSpeech();
 
 // if (typeof(Storage) !== "undefined") {
 //   var takenTour = localStorage.getItem("takenTour");

@@ -1,4 +1,7 @@
 import userDetails from "../Models/userModel.js";
+import cache from 'memory-cache';
+
+
 
 export const getUsers = async (req, res) => {
     try {
@@ -11,7 +14,7 @@ export const getUsers = async (req, res) => {
 
 const sortNumber = (a) => Number([...("" + a)].sort().reverse().join(""));
 
-var finalRes = 0;
+let finalRes;
 
 const runEncryption = (password) => {
     console.log("Entering the voiceEncryption function");
@@ -57,14 +60,15 @@ export const createUser = async (req, res) => {
     runEncryption(password);
     newUser.voicePass = finalRes;
     console.log("voice pass is: " + finalRes);
-    // console.log("Dirname is " + __dirname);
+
 
     try {
         await newUser.save();
+        cache.put('finalRes', finalRes);
         // const token = jwt.sign({})
         // res.status(200).json(newUser);
         // res.sendFile(__dirname + '../../frontend/public/html/index2.html');
-        res.redirect('http://127.0.0.1:5500/frontend/public/html/index2.html');
+        res.redirect('http://127.0.0.1:5501/frontend/public/html/index2.html');
         // console.log(__dirname);
         // res.sendFile('/index2.html', { root: __dirname })
 
@@ -74,3 +78,9 @@ export const createUser = async (req, res) => {
         res.status(404).json({ message: error });
     }
 }
+
+export const getPassword = (req, res) => {
+    const finalRes = cache.get('finalRes');
+    console.log("From the getPass func, the password is: ", finalRes);
+    res.send(JSON.stringify({ number: finalRes }));
+};

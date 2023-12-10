@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
-// import cors from 'cors';
+import cors from 'cors';
 import userRoutes from './Routes/users.js'
 import * as dotenv from 'dotenv';
 // basically being used to configure environmental variables and not store sensitive info like passwords in code. 
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static('../frontend/public/html'));
 
-// app.use(cors());
+app.use(cors());
 
 app.use('/users', userRoutes);
 
