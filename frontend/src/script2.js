@@ -54,7 +54,7 @@ function textToSpeech() {
     }
 
     // Speak text on page load (try using a setTimeout for better compatibility)
-    setTimeout(speakText, 150);
+    setTimeout(speakText, 1500);
   } else {
     alert('Text-to-speech not supported in this browser.');
   }
